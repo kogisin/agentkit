@@ -107,7 +107,7 @@ _Prerequisites_:
 - Set `OPENAI_API_KEY` environment variable
 
 ```bash
-poetry add coinbase-agentkit-langchain langchain-openai langgraph
+pip install coinbase-agentkit-langchain langchain-openai langgraph
 ```
 
 ```python
@@ -388,6 +388,38 @@ This section provides a detailed list of all available action providers and thei
 </details>
 
 <details>
+<summary><strong>Nillion</strong></summary>
+<table width="100%">
+<tr>
+    <td width="200"><code>lookup_schema</code></td>
+    <td width="768">Looks up a schema by description and returns both the schema UUID and corresponding JSON schema.</td>
+</tr>
+<tr>
+    <td width="200"><code>create_schema</code></td>
+    <td width="768">Creates a new schema in the Nillion SecretVault based on a natural language description.</td>
+</tr>
+<tr>
+    <td width="200"><code>data_upload</code></td>
+    <td width="768">Uploads data into the Nillion SecretVault using a specified schema UUID.</td>
+</tr>
+<tr>
+    <td width="200"><code>data_download</code></td>
+    <td width="768">Downloads all data from the Nillion SecretVault for a specified schema UUID.</td>
+</tr>
+</table>
+</details>
+
+<details>
+<summary><strong>Onramp</strong></summary>
+<table width="100%">
+<tr>
+    <td width="200"><code>get_onramp_buy_url</code></td>
+    <td width="768">Gets a URL to purchase cryptocurrency from Coinbase via Debit card or other payment methods.</td>
+</tr>
+</table>
+</details>
+
+<details>
 <summary><strong>Pyth</strong></summary>
 <table width="100%">
 <tr>
@@ -531,8 +563,8 @@ AgentKit supports the following wallet providers:
 
 EVM:
 
-- [CdpWalletProvider](https://github.com/coinbase/agentkit/blob/master/python/coinbase_agentkit/wallet_providers/cdp_wallet_provider.py) - Uses the Coinbase Developer Platform (CDP) API Wallet
-- [EthAccountWalletProvider](https://github.com/coinbase/agentkit/blob/master/python/coinbase_agentkit/wallet_providers/eth_account_wallet_provider.py) - Uses a local private key for any EVM-compatible chain
+- [CdpWalletProvider](https://github.com/coinbase/agentkit/blob/master/python/coinbase-agentkit/coinbase_agentkit/wallet_providers/cdp_wallet_provider.py) - Uses the Coinbase Developer Platform (CDP) API Wallet
+- [EthAccountWalletProvider](https://github.com/coinbase/agentkit/blob/master/python/coinbase-agentkit/coinbase_agentkit/wallet_providers/eth_account_wallet_provider.py) - Uses a local private key for any EVM-compatible chain
 
 ### CdpWalletProvider
 
